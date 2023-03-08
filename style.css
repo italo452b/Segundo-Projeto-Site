@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script&display=swap'); /* link da fonte pega no GOOGLE FONT*/
+
+@font-face{ /* colocando fonte baixada que está dentro da pasta */
+    font-family: 'Android'; /* dando nome a fonte */
+    src: url('fontes/idroid.otf') format('opentype'); /* colocando a pasta que está a fonte*/
+    font-weight: normal;
+}
+
+:root { /* para criar variaveis de cores e fontes */
+    --cor0: #c5ebd6; /* VARIAVEIS E OS CODIGOS DAS CORES */
+    --cor1: #83e1ad; /* VARIAVEIS E OS CODIGOS DAS CORES */
+    --cor2: #3ddc84; /* VARIAVEIS E OS CODIGOS DAS CORES */
+    --cor3: #2fa866; /* VARIAVEIS E OS CODIGOS DAS CORES */
+    --cor4: #1a5c37; /* VARIAVEIS E OS CODIGOS DAS CORES */
+    --cor5: #063d1e; /* VARIAVEIS E OS CODIGOS DAS CORES */
+
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: font-family: 'Dancing Script', cursive; /*nome da fonte pega no GOOGLE FONT, fonte importada COM O LINK em cima PELO GOOGLE FONT*/
+    --fonte-android: 'Android', cursive; /* fonte importada COM A PASTA em cima */
+}
+* {
+    margin: 0px; /* configurações globais */
+    padding: 0px; /* configurações globais */
+}
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+
+}
+a.externo::after { /* Qualquer link com a class externo DEPOIS dele emoji  */
+    content: '\1F517'; /* emoji de link  */
+
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* colocando degradê no cabeçalho */
+    min-height: 150px; /* altura minima do cabeçalho */
+    text-align: center; /* centralizando o cabeçalho */
+    padding-top: 40px; /* um espaço de dentro para fora 'margin' na parte de CIMA 'top' */
+
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em; /* aumentando o tamanho da letra h1*/
+    font-weight: normal; /* tirando o negrito que já vem nos h1, h2, h3 etc */
+    margin-bottom: 20px; /* espaço da margem para fora, na parte de baixo 'bottom' */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.505); /* sombra no texto, com 2px 2px 0px black*/
+
+    
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em; /* aumentando o tamanho da letra do Paragrafo */
+    color: white;
+    max-width: 600px; /* largura maxima e consequentimente transformando em blobo */
+    padding-right: 10px; /* um espaço de dentro para fora na direita, nesse caso usado para não ficar tão colocado o final da tela quando for diminuir */
+    padding-left: 10px;/* um espaço de dentro para fora na esquerda, nesse caso usado para não ficar tão colocado o final da tela quando for diminuir */
+    margin: auto; /* para centralizar, já que em cima usando o max-width, ela foi transformada em um bloco*/
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.505); /* sombra no texto, com 2px 2px 0px black*/
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    text-shadow: opx 7px 7px rgba(0, 0, 0, 0.507);
+}
+
+nav > a {
+    color: var(--cor1); /*cor da letra em branco */
+    padding: 10px; /* espaço de dentro pra fora, assim está deixando espaço entre os links  */
+    border-radius: 5px;
+    text-decoration: none; /* para ele perder o sublinhado */
+    font-weight: bold; /* letra em negrito */
+    transition-duration: .5s;  /* duração de meio segundo para acontecer o efeito de mudanças de cores e sombra */
+}
+
+nav > a:hover { /* para quando passar o mouse por cima mudar as cores da letra e da sombra e colocar um efeito legal */
+    background-color: var(--cor3); /* cor da sombra ao passar o mouse por cima */
+    color: var(--cor5); /* cor da letra muda de branco para verde ao passar o mouse por cima*/
+}
+
+main{
+
+    min-width: 300px ; /* largura minima*/
+    max-width: 1000px; /* largura maxima*/
+    margin: auto; /* Para centralizar e se adpata conforme aumenta e diminui a tela */
+    margin-bottom: 30px; /* margem na parte de baixo */
+    padding: 20px; /* espaço de dentro para fora*/
+    background-color:  white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.501) ;/* para colocar o efeito de sombra */
+    border-bottom-left-radius: 10px; /* para colocar a borda arredondada em baixo na esquerda */
+    border-bottom-right-radius: 10px; /* para colocar a borda arredondada em baixo na direita */
+}
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android) ;
+    font-weight: normal; /* tirando o negrito que já vem nos h1, h2, h3 etc */
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-android); /* fonte da letra */
+    color: var(--cor4); /* cor da letra*/
+    font-size: 1.3em; /* aumentando o tamanho da letra */
+    font-weight: normal; /* tirando o negrito que já vem nos h1, h2, h3 etc */
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* colocando degradê da direita até ficar transparente*/
+    text-indent: 8px; /* recuo (espaço vazio) que é colocado antes de começar as linhas de texto em um bloco. */
+}
+
+main p {
+    margin: 15px 0px; /* margin nos paragrafos */
+    text-align: justify; /* para alinhar as letras dentro do bloco*/ 
+    text-indent: 30px; /* para deixar o paragrafo com espaço na frente, como se fosse o inicio de uma redação */
+    font-size: 1em; /* aumentando o tamanho da letra do paragrafo */ 
+    line-height: 2em; /* para O ESPAÇO entre uma LINHA e outra no paragrafo HAVER UM ESPAÇO DE 1em */
+}
+
+main strong{
+    color: var(--cor4); /* cor da letra */
+    font-weight: bold; /* fonte em negrito */
+}
+
+main a {
+    text-decoration: none; /* retirando o sublinhado */
+    font-weight: bold; /* fonte em negrito*/
+    color: var(--cor5); /* cor da letra */
+    background-color: var(--cor1); /* cor */
+    padding: 2px 6px /* espaço de dentro para fora, 2px em cima e em baixo, 6px aos lados */
+}
+
+main a:hover{ /* Para quando passar o mouse por cima, ativar as funções a baixo */
+    text-decoration: underline; /* quando passar o mouse por cima, vai ganhar o sublinhado */
+    color: var(--cor4); /* cor da letra */
+}
+
+main img{
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px; /* maximo 350 px para imagem ir se adaptando conforme vá diminuindo e aumentando a tela */
+    display: block; /* transformando em display block, para poder funcionar a margin: auto, porquê por padrão uma imagem não é um bloco */
+    margin: auto; /* para a imagem ficar centralizada no site, conforme a gente vá diminuindo a tela */
+
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+aside {
+    background-color: var(--cor1);
+    padding: 10px ; /* espaço de dentro */
+    border-radius: 10px; /* bordas arredondadas */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.508); /* para colocar o efeito de sombra */
+    
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white; /* cor da letra */
+    padding: 10px; /* espaço de dentro para fora */
+    margin: -10px -10px 0px -10px; /* foi usado o -, para a margem ser de para fora, menos em baixo, onde ficou 0px */
+    border-radius: 10px 10px 0px 0px; /* colocando borda arredondada em cima na direita e na esquerda, e não nas partes de baixo */
+
+}
+
+aside > ul {
+    list-style-type: '\2714'; /* simbolo de check list, pegado do site emojipedia  */
+    list-style-position: inside; /* para as bolinhas da listas ficarem dentro do bloco */
+    columns: 2; /* dividindo a lista com 2 colunas */
+
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white; /* cor da letra*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center ; /* para centrallizar o texto no meio */
+    font-size: 1em; /* aumentando letra do texto */
+    padding: 5px; /* espaçamento de dentro */
+}
+
+footer a { /* links dentro do footer */
+    color: white; /* cor dos links */
+    font-weight: bolder; /* colocando em negrito  */
+    text-decoration: none; /* tirando o sublinhado */
+}
+
+footer a:hover{ /* colocando o efeito quando passar o mouse em cima */
+    text-decoration: underline;/* voltando o sublinhado ao passar o mouse em cima*/
+    color: var(--cor1);
+
+}
