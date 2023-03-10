@@ -61,7 +61,7 @@ header > p {
     padding-right: 10px; /* um espaço de dentro para fora na direita, nesse caso usado para não ficar tão colocado o final da tela quando for diminuir */
     padding-left: 10px;/* um espaço de dentro para fora na esquerda, nesse caso usado para não ficar tão colocado o final da tela quando for diminuir */
     margin: auto; /* para centralizar, já que em cima usando o max-width, ela foi transformada em um bloco*/
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.505); /* sombra no texto, com 2px 2px 0px black*/
 }
 
